@@ -8,7 +8,7 @@ const heapSort = function (nums) {
 
   // 构建堆
   for (let i = Math.floor(l / 2); i >= 0; i--) {
-    buildHeap(nums, n, i)
+    buildHeap(nums, l, i)
   }
 
   // n-1次交换和构建
@@ -32,7 +32,7 @@ function buildHeap(nums, end, start) {
   }
 
   if (largest !== start) {
-    swap(nums, i, largest)
+    swap(nums, start, largest)
     buildHeap(nums, end, largest)
   }
 }
